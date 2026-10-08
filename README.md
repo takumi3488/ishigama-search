@@ -174,6 +174,8 @@ bun run check-types
 bun run build
 ```
 
+`@vite-pwa/assets-generator` 2.xを使う場合は、対応するpeer依存を宣言する`vite-plugin-pwa` 2.xと組み合わせる。
+
 整形チェックでは`.claude/`と`.omp/`だけを対象外にし、アプリケーションのソースとCI設定は対象に含める。
 
 ## 参照先
