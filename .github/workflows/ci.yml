@@ -69,7 +69,7 @@ jobs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     env:
       ALCHEMY_PASSWORD: ${{ secrets.ALCHEMY_PASSWORD }}
-      ALCHEMY_STAGE: ${{ vars.ALCHEMY_STAGE || 'dev_admin' }}
+      ALCHEMY_STAGE: ${{ vars.ALCHEMY_STAGE || 'prod' }}
       AI_SEARCH_INSTANCE: ${{ vars.AI_SEARCH_INSTANCE || 'er_wd7000' }}
       AI_SEARCH_NAMESPACE: ${{ vars.AI_SEARCH_NAMESPACE || 'ishigama-recipes' }}
       CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
