@@ -150,6 +150,7 @@ AI SearchのRead／Indexは追加不要。Editで管理操作、Runで検索実�
 Terraformでの管理は[PR #266](https://github.com/takumi3488-private/terraforms/pull/266)で追跡しており、PRはTerraform CIに通過してレビュー待ち。今後、mainのCloudflare Terraform適用を行う前にこのPRをマージし、作成したトークンをmain側の設定でも管理できる状態にする。
 
 GitHub Actionsは、プルリクエストとmainへのプッシュで整形、lint、テスト、型チェック、ビルドを品質ゲートとして実行する。ゲート通過後、mainへのプッシュでAlchemyのWebとサーバーのWorkerを`dev_admin`へデプロイし、`ghcr.io/takumi3488/ishigama-search-scraper`を`latest`、`main`、完全なコミットSHAのタグ付きで`linux/amd64`と`linux/arm64`向けに公開する。
+デプロイは`--no-input --yes`で非対話実行するため、Turboのinteractiveタスクには設定しない。
 
 ワークフローはmainに反映済み。ワークフローだけを登録した初回プッシュは`[skip ci]`で実行を省略し、アプリ変更はPRのCI通過後にsquash mergeする。
 
