@@ -19,8 +19,7 @@
       "persistent": true
     },
     "deploy": {
-      "cache": false,
-      "interactive": true
+      "cache": false
     },
     "destroy": {
       "cache": false,
