@@ -1,4 +1,4 @@
-FROM oven/bun:1.4.2 AS builder
+FROM oven/bun:1.4.2@sha256:9114c058aeae42162ee16dd5084b95fe9473970bb6bcb5b232ab1630f0546895 AS builder
 WORKDIR /app
 
 COPY package.json bun.lock ./
@@ -13,7 +13,7 @@ COPY scripts/recipes.ts scripts/recipes.ts
 COPY packages/api/src/recipes.ts packages/api/src/recipes.ts
 RUN bun build scripts/recipes.ts --target=bun --outfile=/app/recipes.js
 
-FROM oven/bun:1.4.2-slim AS runtime
+FROM oven/bun:1.4.2-slim@sha256:cb3bbbb08e13a4a2ff400f24c7a2a1d5efa83f6ef8544d52d95a519631e2fc61 AS runtime
 WORKDIR /app
 COPY --from=builder --chown=bun:bun /app/recipes.js ./recipes.js
 USER root
