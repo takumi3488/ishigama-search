@@ -16,23 +16,23 @@
     "@orpc/client": "catalog:",
     "@orpc/server": "catalog:",
     "@solidjs/meta": "1.0.0-next.2",
-    "@solidjs/router": "2.0.0-next.34",
+    "@solidjs/router": "2.0.0-next.35",
     "@solidjs/web": "2.0.0-rc.13",
-    "@tanstack/query-core": "5.101.4",
+    "@tanstack/query-core": "5.104.1",
     "solid-js": "2.0.0-rc.13",
     "varlock": "catalog:",
-    "vite-plugin-pwa": "^1.3.0",
+    "vite-plugin-pwa": "^2.0.0",
     "zod": "catalog:"
   },
   "devDependencies": {
     "@ishigama-search/config": "workspace:*",
     "@solidjs/vite-plugin": "3.0.0-next.47",
-    "@tailwindcss/vite": "^4.3.3",
-    "@vite-pwa/assets-generator": "^1.0.2",
+    "@tailwindcss/vite": "4.3.3",
+    "@vite-pwa/assets-generator": "2.0.0",
     "filesystem-routing": "0.4.0",
-    "tailwindcss": "^4.3.3",
+    "tailwindcss": "4.3.3",
     "typescript": "catalog:",
-    "vite": "^8.2.2"
+    "vite": "8.3.4"
   },
   "engines": {
     "node": ">=24"

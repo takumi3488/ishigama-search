@@ -45,9 +45,9 @@
     "@cloudflare/workers-types": "catalog:",
     "@ishigama-search/config": "workspace:*",
     "@types/node": "catalog:",
-    "oxfmt": "^0.66.0",
-    "oxlint": "^1.81.0",
-    "turbo": "^2.10.12",
+    "oxfmt": "0.72.0",
+    "oxlint": "1.87.0",
+    "turbo": "2.11.7",
     "typescript": "catalog:",
     "varlock": "catalog:"
   },
