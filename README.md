@@ -28,10 +28,10 @@ bun run --env-file packages/infra/.env deploy
 
 既存のAlchemyスタックでは、サーバーはポート3000、Webアプリはポート3001で動く。`bun run dev:server`もスタック全体を起動するため、サーバーだけを起動するコマンドではない。Alchemyの出力に、取込に使うAI Searchの名前空間名とインスタンス名が表示される。
 
-`dev_admin`のデプロイ先は次のとおり。
+公開環境は`prod`ステージのみ。デプロイ先は次のとおり。
 
-- [Webアプリ（ライトテーマ）](https://ishigama-search-web-dev-admin-hm365fjffzgrplss.takumi3488.workers.dev/)
-- [API](https://ishigama-search-server-dev-admin-5ow4bwhxj7knsmw4.takumi3488.workers.dev/)
+- [Webアプリ（ライトテーマ）](https://ishigama-search-web-prod-pw2ixl574flpl3uv.takumi3488.workers.dev/)
+- [API](https://ishigama-search-server-prod-nscpk2fpzh2ge4iq.takumi3488.workers.dev/)
 
 このデプロイ先を更新するときは、`CORS_ORIGIN`に上記Webアプリのオリジンを完全一致で設定する。新しいステージでは、まずデプロイしてWebアプリのURLを取得し、そのURLを`CORS_ORIGIN`に設定してから、サーバーの設定を再度デプロイする。
 
@@ -130,7 +130,7 @@ docker run --rm \
 
 ## CIとGitHubデプロイ
 
-設定済みのリポジトリ変数は`ALCHEMY_STAGE=dev_admin`、`CORS_ORIGIN`（上記Webアプリのオリジン）、`CLOUDFLARE_ACCOUNT_ID`、`AI_SEARCH_NAMESPACE`、`AI_SEARCH_INSTANCE`。`CLOUDFLARE_API_TOKEN`もリポジトリシークレットに登録済み。
+設定済みのリポジトリ変数は`ALCHEMY_STAGE=prod`、`CORS_ORIGIN`（上記Webアプリのオリジン）、`CLOUDFLARE_ACCOUNT_ID`、`AI_SEARCH_NAMESPACE`、`AI_SEARCH_INSTANCE`。`CLOUDFLARE_API_TOKEN`もリポジトリシークレットに登録済み。
 
 Alchemy v2の既存のネイティブCloudflare状態を使った検証では、`ALCHEMY_PASSWORD`は任意であり、不要だった。
 
@@ -149,7 +149,7 @@ AI SearchのRead／Indexは追加不要。Editで管理操作、Runで検索実�
 
 Terraformでの管理定義は[PR #266](https://github.com/takumi3488-private/terraforms/pull/266)でmainへsquash merge済み。マージ後のTerraform CIも通過し、作成済みのCI用トークンはmain側の設定で管理している。
 
-GitHub Actionsは、プルリクエストとmainへのプッシュで整形、lint、テスト、型チェック、ビルドを品質ゲートとして実行する。ゲート通過後、mainへのプッシュでAlchemyのWebとサーバーのWorkerを`dev_admin`へデプロイし、`ghcr.io/takumi3488/ishigama-search-scraper`を`latest`、`main`、完全なコミットSHAのタグ付きで`linux/amd64`と`linux/arm64`向けに公開する。
+GitHub Actionsは、プルリクエストとmainへのプッシュで整形、lint、テスト、型チェック、ビルドを品質ゲートとして実行する。ゲート通過後、mainへのプッシュでAlchemyのWebとサーバーのWorkerを`prod`へデプロイし、`ghcr.io/takumi3488/ishigama-search-scraper`を`latest`、`main`、完全なコミットSHAのタグ付きで`linux/amd64`と`linux/arm64`向けに公開する。
 デプロイは`--no-input --yes`で非対話実行するため、Turboのinteractiveタスクには設定しない。
 
 ワークフローはmainに反映済み。ワークフローだけを登録した初回プッシュは`[skip ci]`で実行を省略し、アプリ変更はPRのCI通過後にsquash mergeする。
