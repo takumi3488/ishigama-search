@@ -1,0 +1,61 @@
+{
+  "name": "ishigama-search",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ],
+    "catalog": {
+      "zod": "^4.5.4",
+      "typescript": "^6.0.3",
+      "@types/node": "^26.4.1",
+      "varlock": "1.18.0",
+      "@cloudflare/workers-types": "^5.20260906.1",
+      "@orpc/server": "^1.15.0",
+      "@orpc/openapi": "^1.15.0",
+      "@orpc/zod": "^1.15.0",
+      "@orpc/client": "^1.15.0"
+    }
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "check": "bun run lint && bun run fmt:check",
+    "check-types": "turbo run check-types",
+    "dev:web": "turbo run dev:bare -F web --",
+    "dev:server": "turbo run dev -F @ishigama-search/infra --",
+    "deploy": "turbo run deploy -F @ishigama-search/infra --",
+    "destroy": "turbo run destroy -F @ishigama-search/infra --",
+    "env:generate": "varlock codegen --path ./apps/web/ && varlock codegen --path ./apps/server/",
+    "recipes:setup": "bun scripts/recipes.ts setup",
+    "recipes:scrape": "bun scripts/recipes.ts scrape",
+    "recipes:index": "bun scripts/recipes.ts index",
+    "fmt:check": "oxfmt --check",
+    "lint": "oxlint",
+    "test": "bun test",
+    "postinstall": "varlock codegen --path ./apps/web/ && varlock codegen --path ./apps/server/"
+  },
+  "dependencies": {
+    "parse5": "^7.3.0",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "catalog:",
+    "@ishigama-search/config": "workspace:*",
+    "@types/node": "catalog:",
+    "oxfmt": "^0.66.0",
+    "oxlint": "^1.81.0",
+    "turbo": "^2.10.12",
+    "typescript": "catalog:",
+    "varlock": "catalog:"
+  },
+  "overrides": {
+    "@solidjs/babel-plugin": "2.0.0-rc.13",
+    "@solidjs/compiler": "2.0.0-rc.13",
+    "@solidjs/signals": "2.0.0-rc.13",
+    "solid-js": "2.0.0-rc.13"
+  },
+  "packageManager": "bun@1.4.2"
+}

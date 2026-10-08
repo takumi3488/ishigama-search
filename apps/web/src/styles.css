@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-orange-50 text-stone-900;
+}

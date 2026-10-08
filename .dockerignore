@@ -1,0 +1,27 @@
+# Keep credentials, local state, dependencies, and the scraped catalogue out of builds.
+.git
+**/.git
+**/.git/**
+.env*
+**/.env*
+.dev.vars*
+**/.dev.vars*
+.npmrc
+**/.npmrc
+.netrc
+**/.netrc
+**/secrets
+**/secrets/**
+**/*.pem
+**/*.key
+node_modules
+**/node_modules
+.alchemy
+**/.alchemy
+.wrangler
+**/.wrangler
+.turbo
+**/.turbo
+/data
+/catalog
+**/catalog

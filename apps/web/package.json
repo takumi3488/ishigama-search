@@ -1,0 +1,40 @@
+{
+  "name": "web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -b ../../packages/api && vite build",
+    "check-types": "tsc -b ../../packages/api && tsc --noEmit",
+    "start": "vite preview",
+    "preview": "vite preview",
+    "generate-pwa-assets": "pwa-assets-generator",
+    "dev:bare": "vite dev",
+    "env:generate": "varlock codegen"
+  },
+  "dependencies": {
+    "@ishigama-search/api": "workspace:*",
+    "@orpc/client": "catalog:",
+    "@orpc/server": "catalog:",
+    "@solidjs/meta": "1.0.0-next.2",
+    "@solidjs/router": "2.0.0-next.34",
+    "@solidjs/web": "2.0.0-rc.13",
+    "@tanstack/query-core": "5.101.4",
+    "solid-js": "2.0.0-rc.13",
+    "varlock": "catalog:",
+    "vite-plugin-pwa": "^1.3.0",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@ishigama-search/config": "workspace:*",
+    "@solidjs/vite-plugin": "3.0.0-next.47",
+    "@tailwindcss/vite": "^4.3.3",
+    "@vite-pwa/assets-generator": "^1.0.2",
+    "filesystem-routing": "0.4.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "catalog:",
+    "vite": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}
