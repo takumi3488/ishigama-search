@@ -28,7 +28,7 @@
     "@ishigama-search/config": "workspace:*",
     "@solidjs/vite-plugin": "3.0.0-next.47",
     "@tailwindcss/vite": "4.3.3",
-    "@vite-pwa/assets-generator": "1.0.4",
+    "@vite-pwa/assets-generator": "2.0.0",
     "filesystem-routing": "0.4.0",
     "tailwindcss": "4.3.3",
     "typescript": "catalog:",
