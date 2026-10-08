@@ -38,7 +38,7 @@
     "postinstall": "varlock codegen --path ./apps/web/ && varlock codegen --path ./apps/server/"
   },
   "dependencies": {
-    "parse5": "^7.3.0",
+    "parse5": "^8.0.0",
     "zod": "catalog:"
   },
   "devDependencies": {
