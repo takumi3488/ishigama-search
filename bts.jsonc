@@ -1,0 +1,28 @@
+// Better-T-Stack project metadata
+//
+// Keep this file to use the `add` command.
+// Add addons: bunx create-better-t-stack@latest add
+//
+// Docs: https://better-t-stack.dev/docs
+// Stack Builder: https://better-t-stack.dev/new
+
+{
+  "$schema": "https://r2.better-t-stack.dev/schema.json",
+  "version": "3.44.3",
+  "createdAt": "2026-10-07T17:18:17.519Z",
+  "reproducibleCommand": "bun create better-t-stack@latest ishigama-search --frontend solid --backend hono --runtime workers --database none --orm none --api orpc --auth none --payments none --addons turborepo oxlint pwa skills --examples none --db-setup none --web-deploy cloudflare --server-deploy cloudflare --git --package-manager bun --install",
+  "database": "none",
+  "orm": "none",
+  "backend": "hono",
+  "runtime": "workers",
+  "frontend": ["solid"],
+  "addons": ["turborepo", "oxlint", "pwa", "skills"],
+  "examples": [],
+  "auth": "none",
+  "payments": "none",
+  "packageManager": "bun",
+  "dbSetup": "none",
+  "api": "orpc",
+  "webDeploy": "cloudflare",
+  "serverDeploy": "cloudflare",
+}

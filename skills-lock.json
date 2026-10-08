@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "hono": {
+      "source": "honojs/skills",
+      "sourceType": "github",
+      "skillPath": "skills/hono/SKILL.md",
+      "computedHash": "e3f141a41800df815000216a53510fe6f888629471c214706cc05adff27297fb"
+    },
+    "turborepo": {
+      "source": "vercel/turborepo",
+      "sourceType": "github",
+      "skillPath": "skills/turborepo/SKILL.md",
+      "computedHash": "9681d8dfeb5e6cdff767f1bcaba5d7ac55732a9d6c02ee120f44229f8ec25e7e"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "tui",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": ["dist/**", ".output/**"]
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "check-types": {
+      "dependsOn": ["^check-types"],
+      "outputs": ["dist/**"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "deploy": {
+      "cache": false,
+      "interactive": true
+    },
+    "destroy": {
+      "cache": false,
+      "interactive": true
+    }
+  },
+  "globalEnv": [
+    "CI",
+    "CORS_ORIGIN",
+    "CLOUDFLARE_ACCOUNT_ID",
+    "AI_SEARCH_NAMESPACE",
+    "AI_SEARCH_INSTANCE",
+    "NODE_ENV",
+    "VERCEL",
+    "VERCEL_ENV",
+    "VERCEL_PROJECT_PRODUCTION_URL",
+    "VERCEL_URL",
+    "VITE_SERVER_URL",
+    "_VARLOCK_ENV_KEY"
+  ],
+  "globalPassThroughEnv": ["CLOUDFLARE_API_TOKEN", "ALCHEMY_PASSWORD"],
+  "globalDependencies": [".env*", "apps/*/.env*", "packages/*/.env*"]
+}

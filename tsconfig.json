@@ -1,0 +1,3 @@
+{
+  "extends": "@ishigama-search/config/tsconfig.base.json"
+}
