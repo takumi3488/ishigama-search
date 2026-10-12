@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@ishigama-search/config": "workspace:*",
-    "@solidjs/vite-plugin": "3.0.0-next.48",
+    "@solidjs/vite-plugin": "3.0.0-next.49",
     "@tailwindcss/vite": "4.3.3",
     "@vite-pwa/assets-generator": "2.0.0",
     "filesystem-routing": "0.4.0",
