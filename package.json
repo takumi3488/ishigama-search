@@ -47,7 +47,7 @@
     "@types/node": "catalog:",
     "oxfmt": "0.73.0",
     "oxlint": "1.88.0",
-    "turbo": "2.11.7",
+    "turbo": "2.11.8",
     "typescript": "catalog:",
     "varlock": "catalog:"
   },
