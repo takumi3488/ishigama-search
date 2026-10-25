@@ -57,5 +57,5 @@
     "@solidjs/signals": "2.0.0-rc.17",
     "solid-js": "2.0.0-rc.17"
   },
-  "packageManager": "bun@1.4.3"
+  "packageManager": "bun@1.4.4"
 }
