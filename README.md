@@ -30,8 +30,10 @@ bun run --env-file packages/infra/.env deploy
 
 公開環境は`prod`ステージのみ。デプロイ先は次のとおり。
 
-- [Webアプリ（ライトテーマ）](https://ishigama-search-web-prod-pw2ixl574flpl3uv.takumi3488.workers.dev/)
+- [Webアプリ（ライトテーマ）](https://ishigama.takumi3488.com/)
 - [API](https://ishigama-search-server-prod-nscpk2fpzh2ge4iq.takumi3488.workers.dev/)
+
+Webアプリの`ishigama.takumi3488.com`はAlchemyの外で、TerraformのWorkers Custom Domainとして`prod`のWeb Workerに割り当てている。Alchemyが割当を上書きしないよう、`Cloudflare.Website.Vite`には`domain`を指定しない。旧`workers.dev`のWebアプリURLは`CORS_ORIGIN`に含まれないため、APIを呼べない。
 
 このデプロイ先を更新するときは、`CORS_ORIGIN`に上記Webアプリのオリジンを完全一致で設定する。新しいステージでは、まずデプロイしてWebアプリのURLを取得し、そのURLを`CORS_ORIGIN`に設定してから、サーバーの設定を再度デプロイする。
 
