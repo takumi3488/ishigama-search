@@ -23,8 +23,8 @@
     "@ishigama-search/config": "workspace:*",
     "@ishigama-search/infra": "workspace:*",
     "@types/node": "catalog:",
-    "tsdown": "0.23.3",
+    "tsdown": "0.23.4",
     "typescript": "catalog:",
-    "wrangler": "4.155.0"
+    "wrangler": "4.156.0"
   }
 }
