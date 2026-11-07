@@ -16,7 +16,7 @@
     "@orpc/client": "catalog:",
     "@orpc/server": "catalog:",
     "@solidjs/meta": "1.0.0-next.2",
-    "@solidjs/router": "2.0.0-next.43",
+    "@solidjs/router": "2.0.0-next.44",
     "@solidjs/web": "2.0.0-rc.21",
     "@tanstack/query-core": "5.105.3",
     "solid-js": "2.0.0-rc.21",
@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@ishigama-search/config": "workspace:*",
-    "@solidjs/vite-plugin": "3.0.0-next.55",
+    "@solidjs/vite-plugin": "3.0.0-next.56",
     "@tailwindcss/vite": "4.3.4",
     "@vite-pwa/assets-generator": "2.0.0",
     "filesystem-routing": "0.4.2",
