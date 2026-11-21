@@ -17,9 +17,9 @@
     "@orpc/server": "catalog:",
     "@solidjs/meta": "2.0.0",
     "@solidjs/router": "2.0.0",
-    "@solidjs/web": "2.0.0",
+    "@solidjs/web": "2.0.1",
     "@tanstack/query-core": "5.108.0",
-    "solid-js": "2.0.0",
+    "solid-js": "2.0.1",
     "varlock": "catalog:",
     "vite-plugin-pwa": "^2.0.0",
     "zod": "catalog:"

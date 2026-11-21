@@ -52,10 +52,10 @@
     "varlock": "catalog:"
   },
   "overrides": {
-    "@solidjs/babel-plugin": "2.0.0",
-    "@solidjs/compiler": "2.0.0",
-    "@solidjs/signals": "2.0.0",
-    "solid-js": "2.0.0"
+    "@solidjs/babel-plugin": "2.0.1",
+    "@solidjs/compiler": "2.0.1",
+    "@solidjs/signals": "2.0.1",
+    "solid-js": "2.0.1"
   },
   "packageManager": "bun@1.4.4"
 }
