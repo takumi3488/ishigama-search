@@ -16,7 +16,7 @@
     "@orpc/client": "catalog:",
     "@orpc/server": "catalog:",
     "@solidjs/meta": "2.0.0",
-    "@solidjs/router": "2.0.0",
+    "@solidjs/router": "2.0.1",
     "@solidjs/web": "2.0.3",
     "@tanstack/query-core": "5.108.1",
     "solid-js": "2.0.3",
